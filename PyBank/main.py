@@ -16,6 +16,7 @@ average_of_changes = []
 greatest_increase = []
 greatest_decrease = []
 
+
 with open(path, "r") as in_file, open(out_path, "w+") as out_file:
     dict_reader = csv.DictReader(in_file)
     dict_writer = csv.DictWriter(out_file, out_header)
@@ -45,6 +46,7 @@ with open(path, "r") as in_file, open(out_path, "w+") as out_file:
     print("-" * 25)
     print(f"Total Months: {total_months}")
     print(f"Total: ${pl_total}")
+
         
 
       
