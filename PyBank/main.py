@@ -7,8 +7,6 @@ path = os.path.join("Resources", "budget_data.csv")
 months = []
 profit_loss = []
 changes = []
-greatest_increase = []
-greatest_decrease = []
 
 with open(path, "r") as file:
     csv_reader = csv.reader(file)
@@ -20,15 +18,20 @@ with open(path, "r") as file:
         months.append(row[0])
         profit_loss.append(int(row[1]))
         
-        #Calulation variables to print to terminal
+        #calulation variables to print to terminal
         total_months = len(list(months))
         pl_total = sum(profit_loss)  
-        
-for i in range(1, len(csv_reader)):
+
+#calculate the changes over entire period between rowsß
+for i in range(1, len(profit_loss)):
 #     last_period_row = csv_reader[i - 1]
 #     current_period_row = csv_reader[i]
-        
-    changes.append()
+    changes.append((int(profit_loss[i]) - int(profit_loss[i-1])))
+    
+    #calucation variables of changes to print to terminal
+    avg_changes = round(sum(changes) / len(changes), 2)
+    greatest_increase = max(changes)
+    greatest_decrease = min(changes)
     
 #analysis to print to the terminal
 print("-" * 25)
@@ -36,9 +39,9 @@ print(f"Financial Analysis")
 print("-" * 25)
 print(f"Total Months: {total_months}")
 print(f"Total: ${pl_total}")
-print(f"Average Change: ${}")
-print(f"Greatest Increase in Profits: {} ${}")
-print(f"Greatest Increase in Profits: {} ${}")
+print(f"Average Change: ${avg_changes}")
+print(f"Greatest Increase in Profits: (${greatest_increase})")
+print(f"Greatest Increase in Profits: (${greatest_decrease})")
 
 
 
