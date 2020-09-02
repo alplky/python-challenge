@@ -38,10 +38,9 @@ print("-" * 41)
 print(f"Total Months: {total_months}")
 print(f"Total: ${pl_total}")
 print(f"Average Change: ${avg_changes}")
-print(f"Greatest Increase in Profits: (${greatest_increase})")
-print(f"Greatest Increase in Profits: (${greatest_decrease})")
-print(changes.index(1926159))
-print(changes.index(-2196167))
+print(f"Greatest Increase in Profits: {months[25]} (${greatest_increase})")
+print(f"Greatest Increase in Profits: {months[44]} (${greatest_decrease})")
+
 
 
 
