@@ -24,8 +24,6 @@ with open(path, "r") as file:
 
 #calculate the changes over entire period between rowsß
 for i in range(1, len(profit_loss)):
-#     last_period_row = csv_reader[i - 1]
-#     current_period_row = csv_reader[i]
     changes.append((int(profit_loss[i]) - int(profit_loss[i-1])))
     
     #calucation variables of changes to print to terminal
@@ -34,14 +32,16 @@ for i in range(1, len(profit_loss)):
     greatest_decrease = min(changes)
     
 #analysis to print to the terminal
-print("-" * 25)
+print("-" * 41)
 print(f"Financial Analysis")
-print("-" * 25)
+print("-" * 41)
 print(f"Total Months: {total_months}")
 print(f"Total: ${pl_total}")
 print(f"Average Change: ${avg_changes}")
 print(f"Greatest Increase in Profits: (${greatest_increase})")
 print(f"Greatest Increase in Profits: (${greatest_decrease})")
+print(changes.index(1926159))
+print(changes.index(-2196167))
 
 
 
