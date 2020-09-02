@@ -25,7 +25,7 @@ with open(path, "r") as file:
         votes.append(row)
         candidates.append(row[2])
 
-#adds 1 vote for each candidates name found in candidates 
+#adds 1 vote in the declared dictionary for each candidate's name found in candidates 
 for candidate in candidates:
     if candidate == "Khan":
         counter["Khan"] += 1
@@ -36,6 +36,21 @@ for candidate in candidates:
     elif candidate == "O'Tooley":
         counter["OTooley"] += 1
     
+    #setting up variables for calculating percentage
+    khan_votes = int(counter["Khan"])
+    correy_votes = int(counter["Correy"])
+    li_votes = int(counter["Li"])
+    otooley_votes = int(counter["OTooley"])
+    
+    total_votes = khan_votes + correy_votes + li_votes + otooley_votes
+    
+    #calculating the percentage of each candidates votes
+    k_percent = (khan_votes / total_votes) * 100
+    c_percent = (correy_votes / total_votes) * 100
+    l_percent = (li_votes / total_votes) * 100
+    o_percent = (otooley_votes / total_votes) * 100
+    
+    
 print(f"Election Results")
 print("-" * 25)
 print(f"Total Votes: {len(votes)}")
@@ -44,3 +59,6 @@ print(f"Khan: ({counter['Khan']})")
 print(f"Correy: ({counter['Correy']})")
 print(f"Li: ({counter['Li']})")
 print(f"O'Tooley: ({counter['OTooley']})")
+print("-" * 25)
+print(f"Winner: Khan")
+print("-" * 25)
