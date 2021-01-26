@@ -19,7 +19,7 @@ It's time to put away the Excel sheet and enter the world of programming with Py
    * The greatest increase in profits (date and amount) over the entire period
    * The greatest decrease in losses (date and amount) over the entire period
 
-2. PyPoll: Help a small, rural town moderinze its vote counting process. Create a python script that analyzes the votes for each candidate and write out the analysis as a text file. A set of poll data is provided called election_data.csv. The dataset is composed of three columns: voter id, county, and candidate.
+2. PyPoll: Help a small, rural town modernize its vote-counting process. Create a python script that analyzes the votes for each candidate and write out the analysis as a text file. A set of poll data is provided called election_data.csv. The dataset is composed of three columns: voter id, county, and candidate.
 
 * Calculations: 
    * The total number of votes cast
